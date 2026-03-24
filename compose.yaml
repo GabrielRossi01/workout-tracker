@@ -1,0 +1,10 @@
+services:
+  workout-tracker-api:
+    image: workout-tracker:latest
+    container_name: workout-tracker-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - API_KEY=${API_KEY}
+      - SPRING_PROFILES_ACTIVE=default
+    restart: unless-stopped
